@@ -1,0 +1,14 @@
+.cols {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  border-right: 1px solid grey;
+}
+
+.vehicleName {
+  margin: 20px 20px 20px 0px;
+  text-align: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+}
