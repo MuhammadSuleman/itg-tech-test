@@ -16,9 +16,12 @@ export class vehiclesService {
   }
 
   getVehicleDescription(id): Observable<any> {
-    return this.httpClient.get('https://itg-prd-recruit.appspot.com/api/vehicle/xe');
-
+    return this.httpClient.get('https://itg-prd-recruit.appspot.com/api/vehicle/xe')
+      .pipe(
+        catchError(this.handleError)
+      );
   }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
