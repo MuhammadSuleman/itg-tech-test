@@ -16,7 +16,7 @@ export class vehiclesService {
   }
 
   getVehicleDescription(id): Observable<any> {
-    return this.httpClient.get('https://itg-prd-recruit.appspot.com/api/vehicle/xe')
+    return this.httpClient.get('https://itg-prd-recruit.appspot.com/api/vehicle/'+{id})
       .pipe(
         catchError(this.handleError)
       );
